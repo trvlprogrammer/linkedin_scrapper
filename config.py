@@ -13,6 +13,6 @@ class Config:
     JWT_ACCESS_TOKEN_EXPIRES=timedelta(hours=int(os.environ.get('JWT_ACCESS_TOKEN_EXPIRES'))) 
     JWT_REFRESH_TOKEN_EXPIRES=timedelta(days=int(os.environ.get('JWT_REFRESH_TOKEN_EXPIRES'))) 
     JWT_ACCESS_TOKEN_EXPIRES=timedelta(hours=int(os.environ.get('ACCESS_EXPIRES')))
-    SCRAPPER_USERNAME = os.environ.get('SCRAPPER_USERNAME')
-    SCRAPPER_PASSWORD = os.environ.get('SCRAPPER_PASSWORD')
+    SCRAPER_USERNAME = os.environ.get('SCRAPER_USERNAME')
+    SCRAPER_PASSWORD = os.environ.get('SCRAPER_PASSWORD')
     USER_AGENT = os.environ.get('USER_AGENT')

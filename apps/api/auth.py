@@ -13,7 +13,7 @@ from apps import api_response
 def login():
     username = request.json.get("username", None)
     password = request.json.get("password", None)
-    if username == current_app.config["SCRAPPER_USERNAME"] and password == current_app.config["SCRAPPER_PASSWORD"]:
+    if username == current_app.config["SCRAPER_USERNAME"] and password == current_app.config["SCRAPER_PASSWORD"]:
         access_token = create_access_token(username)
         refresh_token = create_refresh_token(username)
         response = api_response("success","Login Success",

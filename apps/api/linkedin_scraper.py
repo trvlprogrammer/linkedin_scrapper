@@ -20,7 +20,7 @@ def detail_user():
         return jsonify(response)
     except Exception as e:
         print(e)
-        response = api_response("error","Error get user detail", result)
+        response = api_response("error","Error get user detail", {})
         return jsonify(response)
 
 
@@ -55,7 +55,7 @@ def user_profile():
         return jsonify(response)
     except Exception as e:
         print(e)
-        response = api_response("error","Error get user profile", result)
+        response = api_response("error","Error get user profile", {})
         return jsonify(response)
 
 # function helper to get entity user_id
