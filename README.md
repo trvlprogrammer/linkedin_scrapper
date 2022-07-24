@@ -23,3 +23,5 @@ This api just for testing to voyager api, voyager api that I use:
 
 
 API Voyagaer endpoint configuration inside file config_routes.py
+
+More detail about voyager api https://linkedin.api-docs.io/
