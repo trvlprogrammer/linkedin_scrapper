@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "326674e5-3ecf-46d6-b34f-47e52f134e26",
+		"name": "Linkedin-Scrapper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18813402"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test\",\r\n    \"password\" : \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail-user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"linkedin username\",\r\n    \"password\" : \"linkedin password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/detail_user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"detail_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network-info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"linkedin username\",\r\n    \"password\" : \"linkedin password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/network_info",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"network_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"linkedin username\",\r\n    \"password\" : \"linkedin password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user_profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user_profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
