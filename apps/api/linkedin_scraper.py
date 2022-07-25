@@ -67,14 +67,17 @@ def get_entity_user_id(cookies):
 
 #helper get request function
 def linkedin_get_helper(l_cookies,url):
-    headers = {
-        "user-agent":current_app.config["USER_AGENT"]
-    }
-    with requests.session() as s:
-        s.cookies['li_at'] = l_cookies["li_at"]
-        s.cookies["JSESSIONID"] = l_cookies["JSESSIONID"]
-        s.headers = headers
-        s.headers["csrf-token"] = l_cookies["JSESSIONID"].strip('"')
-        response = s.get(url)
-        result = response.json()
-        return result
+    try :
+        headers = {
+            "user-agent":current_app.config["USER_AGENT"]
+        }
+        with requests.Session() as s:
+            s.cookies['li_at'] = l_cookies["li_at"]
+            s.cookies["JSESSIONID"] = l_cookies["JSESSIONID"]
+            s.headers = headers
+            s.headers["csrf-token"] = l_cookies["JSESSIONID"].strip('"')
+            response = s.get(url)
+            result = response.json()
+            return result
+    except Exception as e:
+        print(e)
