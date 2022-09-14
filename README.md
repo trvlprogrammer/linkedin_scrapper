@@ -12,7 +12,7 @@ LinkedIn Scraper with voyager API
    . Copy file .testing.env and rename to .env
    . Open file .env and adjust the value
 6. Run the apps, cd to root folder apps run command "flask run" or "python run.py" and make sure you activate your virtual env before running this command.
-7. Check collection folder, it hase postman collection.
+7. Check collection folder, it has postman collection.
 
 For username and password, you can use a valid/active user account. I suggest using a dummy account for testing.
 
