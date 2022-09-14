@@ -11,17 +11,10 @@ LinkedIn Scraper with voyager API
 5. Setup configuration apps 
    . Copy file .testing.env and rename to .env
    . Open file .env and adjust the value
-   . To login this apps using SCRAPER_USERNAME and SCRAPER_PASSWORD, you can change this to whatever you want
 6. Run the apps, cd to root folder apps run command "flask run" or "python run.py" and make sure you activate your virtual env before running this command.
 7. Check collection folder, it hase postman collection.
 
+For username and password, you can use a valid/active user account. I suggest using a dummy account for testing.
 
-This api just for testing to voyager api, voyager api that I use:
-- /voyager/api/me
-- /voyager/api/identity/profiles/%s/networkinfo
-- /mob/sso/you
-
-
-API Voyagaer endpoint configuration inside file config_routes.py
-
-More detail about voyager api https://linkedin.api-docs.io/
+For this project, I am using the library from the repo this https://github.com/tomquirk/linkedin-api
+More detail about voyager API https://linkedin.api-docs.io/
