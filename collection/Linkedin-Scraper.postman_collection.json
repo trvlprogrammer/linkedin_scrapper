@@ -1,39 +1,13 @@
 {
 	"info": {
-		"_postman_id": "326674e5-3ecf-46d6-b34f-47e52f134e26",
+		"_postman_id": "96701909-105a-40de-a6cf-953233ccaac1",
 		"name": "Linkedin-Scraper",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "18813402"
 	},
 	"item": [
 		{
-			"name": "Login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"test\",\r\n    \"password\" : \"test\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{base_url}}/login",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Detail-user",
+			"name": "Get-Profile-Data-By-URL",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -45,7 +19,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"linkedin username\",\r\n    \"password\" : \"linkedin password\"\r\n}",
+					"raw": "{\r\n    \"username\" : \"{{username}}\",\r\n    \"password\" : \"{{password}}\",\r\n    \"urls\" : [\r\n        \"https://www.linkedin.com/in/naylahamid/\"\r\n        ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -53,19 +27,19 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/detail_user",
+					"raw": "{{base_url}}/get_profile_data",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
-						"detail_user"
+						"get_profile_data"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Network-info",
+			"name": "Get-Profile-Data-By-Location",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -77,7 +51,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"linkedin username\",\r\n    \"password\" : \"linkedin password\"\r\n}",
+					"raw": "{\r\n    \"username\" : \"{{username}}\",\r\n    \"password\" : \"{{password}}\",\r\n    \"location\": \"jakarta\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -85,44 +59,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/network_info",
+					"raw": "{{base_url}}/get_people_by_locations",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
-						"network_info"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "User-profile",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{token}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"linkedin username\",\r\n    \"password\" : \"linkedin password\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{base_url}}/user_profile",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"user_profile"
+						"get_people_by_locations"
 					]
 				}
 			},
